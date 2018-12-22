@@ -54,7 +54,7 @@ public class JunitTest {
 
     /**
      *
-     * 功能描述: git branch second test
+     * 功能描述: second merge test
      *
      * @param:
      * @return:
