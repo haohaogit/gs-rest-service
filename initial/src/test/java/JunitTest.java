@@ -51,4 +51,14 @@ public class JunitTest {
         log.debug("log debug test");
         log.error("log error test");
     }
+
+    /**
+     *
+     * 功能描述: git branch second test
+     *
+     * @param:
+     * @return:
+     * @auther: dongQing
+     * @date: 2018-12-22 21:02
+     */
 }
