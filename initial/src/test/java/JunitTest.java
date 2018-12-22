@@ -61,4 +61,8 @@ public class JunitTest {
      * @auther: dongQing
      * @date: 2018-12-22 21:02
      */
+    @Test
+    public void secondTest() {
+        log.debug("second slf4j test");
+    }
 }
