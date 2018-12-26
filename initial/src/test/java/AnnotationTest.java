@@ -1,7 +1,6 @@
 
-import annotation.Mytest;
-import ch.qos.logback.core.net.SyslogOutputStream;
-import exercise.UseAnnotation;
+import dong.annotations.Mytest;
+import dong.exercise.UseAnnotation;
 
 
 import java.lang.annotation.Annotation;
@@ -10,7 +9,7 @@ import java.lang.reflect.Method;
 /**
  * @CopyRightBy zcy.qyg.cn
  * @ClassName AnnotationTest
- * @Description To test how to define and use annotation , and test reflect of annotation
+ * @Description To test how to define and use dong.annotations , and test reflect of dong.annotations
  * @Author DongQing
  * @Date 2018-12-25 10:41
  **/
@@ -18,7 +17,7 @@ public class AnnotationTest {
 
     public static void main(String[] args) throws NoSuchMethodException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         // 通过反射 获取类的句柄
-        Class className = Class.forName("exercise.UseAnnotation");
+        Class className = Class.forName("dong.exercise.UseAnnotation");
 
         UseAnnotation useAnnotation = (UseAnnotation) className.newInstance();
         useAnnotation.outPrintln();
