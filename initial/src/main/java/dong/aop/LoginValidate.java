@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * @CopyRightBy zcy.qyg.cn
  * @AnnotationName LoginValidate
- * @Description TODO
+ * @Description 定义注解：@LoginValidate
  * @Author DongQing
  * @Date 2018-12-26 17:50
  **/

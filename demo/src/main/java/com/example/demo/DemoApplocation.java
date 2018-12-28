@@ -1,19 +1,18 @@
-package dong;
+package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @CopyRight By zcy.qyg.cn
- * @ClassName dong.Application
- * @Description start class
+ * @CopyRightBy zcy.qyg.cn
+ * @ClassName DemoApplocation
+ * @Description TODO
  * @Author DongQing
- * @Date 2018-12-22 20:24
+ * @Date 2018-12-27 22:45
  **/
 @SpringBootApplication
-public class Application {
+public class DemoApplocation {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-
+        SpringApplication.run(DemoApplocation.class, args);
     }
 }

@@ -14,6 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginController {
 
+    /**
+     *
+     * 功能描述: 验证注解是否生效 （@LoginValidate）
+     *
+     * @param:
+     * @return:
+     * @auther: dongQing
+     * @date: 2018-12-26 19:19
+     */
     @LoginValidate
     @RequestMapping("/login")
     public String loginValidate1() {

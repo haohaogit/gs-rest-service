@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * @CopyRightBy zcy.qyg.cn
  * @ClassName LoginValidate
- * @Description TODO
+ * @Description    use AOP programming to validate how to use @annotation
  * @Author DongQing
  * @Date 2018-12-26 17:51
  **/
@@ -17,6 +17,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoginValidateAspect {
 
+    /**
+     *
+     * 功能描述: 使用自定义注解（@LoginValidate），定义切面
+     *
+     * @param:
+     * @return:
+     * @auther: dongQing
+     * @date: 2018-12-26 19:13
+     */
     @Around("@annotation(LoginValidate)")
     public Object validateUserAuth(ProceedingJoinPoint point, LoginValidate LoginValidate) {
         Object obj = null;
