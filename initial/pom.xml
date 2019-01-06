@@ -16,6 +16,7 @@
     <properties>
         <java.version>1.8</java.version>
         <aspectj.version>1.7.0</aspectj.version>
+        <lombok.version>1.16.10</lombok.version>
     </properties>
 
     <dependencies>
@@ -40,6 +41,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
 
         <dependency>
@@ -53,6 +55,12 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>1.5.7.RELEASE</version>
         </dependency>
 
     </dependencies>
