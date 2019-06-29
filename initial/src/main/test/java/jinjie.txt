@@ -1,0 +1,406 @@
+{
+		status: "1",
+		info: "OK",
+		infocode: "10000",
+		count: "1",
+		route:  {
+		origin: "120.081291,30.128094",
+		destination: "120.078607,30.147591",
+		taxi_cost: "11",
+		paths:  [
+		 {
+		distance: "2805",
+		duration: "505",
+		strategy: "速度最快",
+		tolls: "0",
+		toll_distance: "0",
+		steps:  [
+		 {
+		instruction: "向南行驶14米右转",
+		orientation: "南",
+		distance: "14",
+		tolls: "0",
+		toll_distance: "0",
+		toll_road: [ ],
+		duration: "7",
+		polyline: "120.081291,30.12779;120.081245,30.127668",
+		action: "右转",
+		assistant_action: [ ],
+		tmcs:  [
+		 {
+		lcode: [ ],
+		distance: "14",
+		status: "未知",
+		polyline: "120.081291,30.12779;120.081245,30.127668"
+		}
+		],
+		cities:  [
+		 {
+		name: "杭州市",
+		citycode: "0571",
+		adcode: "330100",
+		districts:  [
+		 {
+		name: "西湖区",
+		adcode: "330106"
+		}
+		]
+		}
+		]
+		},
+		 {
+		instruction: "沿鲤鱼山街向西行驶228米右转",
+		orientation: "西",
+		road: "鲤鱼山街",
+		distance: "228",
+		tolls: "0",
+		toll_distance: "0",
+		toll_road: [ ],
+		duration: "34",
+		polyline: "120.081245,30.127668;120.080559,30.127855;120.080482,30.127878;120.080048,30.12801;120.07933,30.128206;120.078949,30.128298",
+		action: "右转",
+		assistant_action: [ ],
+		tmcs:  [
+		 {
+		lcode: [ ],
+		distance: "76",
+		status: "畅通",
+		polyline: "120.081245,30.127668;120.080559,30.127855;120.080482,30.127878"
+		},
+		 {
+		lcode: [ ],
+		distance: "44",
+		status: "畅通",
+		polyline: "120.080482,30.127878;120.080048,30.12801"
+		},
+		 {
+		lcode: [ ],
+		distance: "71",
+		status: "畅通",
+		polyline: "120.080048,30.12801;120.07933,30.128206"
+		},
+		 {
+		lcode: [ ],
+		distance: "37",
+		status: "畅通",
+		polyline: "120.07933,30.128206;120.078949,30.128298"
+		}
+		],
+		cities:  [
+		 {
+		name: "杭州市",
+		citycode: "0571",
+		adcode: "330100",
+		districts:  [
+		 {
+		name: "西湖区",
+		adcode: "330106"
+		}
+		]
+		}
+		]
+		},
+		 {
+		instruction: "沿凌家桥路途径洙泗路向北行驶2.0千米左转进入主路",
+		orientation: "北",
+		road: "凌家桥路",
+		distance: "1974",
+		tolls: "0",
+		toll_distance: "0",
+		toll_road: [ ],
+		duration: "272",
+		polyline: "120.078949,30.128298;120.078995,30.12841;120.078995,30.13011;120.078972,30.131189;120.078934,30.131721;120.078819,30.132877;120.078712,30.133755;120.078674,30.134518;120.078674,30.13497;120.078705,30.135496;120.078705,30.135515;120.078812,30.136385;120.078949,30.137453;120.078995,30.137896;120.079185,30.139414;120.079414,30.141262;120.079559,30.142427;120.07959,30.142647;120.079651,30.143061;120.079727,30.143633;120.079895,30.144905;120.080048,30.146067",
+		action: "左转",
+		assistant_action: "进入主路",
+		tmcs:  [
+		 {
+		lcode: [ ],
+		distance: "201",
+		status: "畅通",
+		polyline: "120.078949,30.128298;120.078995,30.12841;120.078995,30.13011"
+		},
+		 {
+		lcode: [ ],
+		distance: "119",
+		status: "畅通",
+		polyline: "120.078995,30.13011;120.078972,30.131189"
+		},
+		 {
+		lcode: [ ],
+		distance: "188",
+		status: "畅通",
+		polyline: "120.078972,30.131189;120.078934,30.131721;120.078819,30.132877"
+		},
+		 {
+		lcode: [ ],
+		distance: "97",
+		status: "畅通",
+		polyline: "120.078819,30.132877;120.078712,30.133755"
+		},
+		 {
+		lcode: [ ],
+		distance: "292",
+		status: "畅通",
+		polyline: "120.078712,30.133755;120.078674,30.134518;120.078674,30.13497;120.078705,30.135496;120.078705,30.135515;120.078812,30.136385"
+		},
+		 {
+		lcode: [ ],
+		distance: "168",
+		status: "畅通",
+		polyline: "120.078812,30.136385;120.078949,30.137453;120.078995,30.137896"
+		},
+		 {
+		lcode: [ ],
+		distance: "169",
+		status: "畅通",
+		polyline: "120.078995,30.137896;120.079185,30.139414"
+		},
+		 {
+		lcode: [ ],
+		distance: "206",
+		status: "畅通",
+		polyline: "120.079185,30.139414;120.079414,30.141262"
+		},
+		 {
+		lcode: [ ],
+		distance: "129",
+		status: "畅通",
+		polyline: "120.079414,30.141262;120.079559,30.142427"
+		},
+		 {
+		lcode: [ ],
+		distance: "24",
+		status: "畅通",
+		polyline: "120.079559,30.142427;120.07959,30.142647"
+		},
+		 {
+		lcode: [ ],
+		distance: "46",
+		status: "畅通",
+		polyline: "120.07959,30.142647;120.079651,30.143061"
+		},
+		 {
+		lcode: [ ],
+		distance: "64",
+		status: "畅通",
+		polyline: "120.079651,30.143061;120.079727,30.143633"
+		},
+		 {
+		lcode: [ ],
+		distance: "141",
+		status: "畅通",
+		polyline: "120.079727,30.143633;120.079895,30.144905"
+		},
+		 {
+		lcode: [ ],
+		distance: "130",
+		status: "畅通",
+		polyline: "120.079895,30.144905;120.080048,30.146067"
+		}
+		],
+		cities:  [
+		 {
+		name: "杭州市",
+		citycode: "0571",
+		adcode: "330100",
+		districts:  [
+		 {
+		name: "西湖区",
+		adcode: "330106"
+		}
+		]
+		}
+		]
+		},
+		 {
+		instruction: "沿云河街辅路向西行驶245米右转",
+		orientation: "西",
+		road: "云河街辅路",
+		distance: "245",
+		tolls: "0",
+		toll_distance: "0",
+		toll_road: [ ],
+		duration: "30",
+		polyline: "120.079903,30.14625;120.077789,30.146349;120.077362,30.146376",
+		action: "右转",
+		assistant_action: [ ],
+		tmcs:  [
+		 {
+		lcode: [ ],
+		distance: "204",
+		status: "畅通",
+		polyline: "120.079903,30.14625;120.077789,30.146349"
+		},
+		 {
+		lcode: [ ],
+		distance: "41",
+		status: "畅通",
+		polyline: "120.077789,30.146349;120.077362,30.146376"
+		}
+		],
+		cities:  [
+		 {
+		name: "杭州市",
+		citycode: "0571",
+		adcode: "330100",
+		districts:  [
+		 {
+		name: "西湖区",
+		adcode: "330106"
+		}
+		]
+		}
+		]
+		},
+		 {
+		instruction: "沿灵美路向北行驶193米右转",
+		orientation: "北",
+		road: "灵美路",
+		distance: "193",
+		tolls: "0",
+		toll_distance: "0",
+		toll_road: [ ],
+		duration: "90",
+		polyline: "120.077377,30.146454;120.077377,30.146484;120.077522,30.147335;120.07766,30.148182",
+		action: "右转",
+		assistant_action: [ ],
+		tmcs:  [
+		 {
+		lcode: [ ],
+		distance: "98",
+		status: "畅通",
+		polyline: "120.077377,30.146454;120.077377,30.146484;120.077522,30.147335"
+		},
+		 {
+		lcode: [ ],
+		distance: "95",
+		status: "畅通",
+		polyline: "120.077522,30.147335;120.07766,30.148182"
+		}
+		],
+		cities:  [
+		 {
+		name: "杭州市",
+		citycode: "0571",
+		adcode: "330100",
+		districts:  [
+		 {
+		name: "西湖区",
+		adcode: "330106"
+		}
+		]
+		}
+		]
+		},
+		 {
+		instruction: "向东行驶18米右转",
+		orientation: "东",
+		distance: "18",
+		tolls: "0",
+		toll_distance: "0",
+		toll_road: [ ],
+		duration: "10",
+		polyline: "120.07766,30.148182;120.077766,30.148174;120.077858,30.148161",
+		action: "右转",
+		assistant_action: [ ],
+		tmcs:  [
+		 {
+		lcode: [ ],
+		distance: "10",
+		status: "未知",
+		polyline: "120.07766,30.148182;120.077766,30.148174"
+		},
+		 {
+		lcode: [ ],
+		distance: "8",
+		status: "未知",
+		polyline: "120.077766,30.148174;120.077858,30.148161"
+		}
+		],
+		cities:  [
+		 {
+		name: "杭州市",
+		citycode: "0571",
+		adcode: "330100",
+		districts:  [
+		 {
+		name: "西湖区",
+		adcode: "330106"
+		}
+		]
+		}
+		]
+		},
+		 {
+		instruction: "向南行驶55米左转",
+		orientation: "南",
+		distance: "55",
+		tolls: "0",
+		toll_distance: "0",
+		toll_road: [ ],
+		duration: "31",
+		polyline: "120.077858,30.148161;120.077797,30.147659",
+		action: "左转",
+		assistant_action: [ ],
+		tmcs:  [
+		 {
+		lcode: [ ],
+		distance: "55",
+		status: "未知",
+		polyline: "120.077858,30.148161;120.077797,30.147659"
+		}
+		],
+		cities:  [
+		 {
+		name: "杭州市",
+		citycode: "0571",
+		adcode: "330100",
+		districts:  [
+		 {
+		name: "西湖区",
+		adcode: "330106"
+		}
+		]
+		}
+		]
+		},
+		 {
+		instruction: "向东行驶78米到达目的地",
+		orientation: "东",
+		distance: "78",
+		tolls: "0",
+		toll_distance: "0",
+		toll_road: [ ],
+		duration: "31",
+		polyline: "120.077797,30.147659;120.078606,30.147617",
+		action: [ ],
+		assistant_action: "到达目的地",
+		tmcs:  [
+		 {
+		lcode: [ ],
+		distance: "78",
+		status: "未知",
+		polyline: "120.077797,30.147659;120.078606,30.147617"
+		}
+		],
+		cities:  [
+		 {
+		name: "杭州市",
+		citycode: "0571",
+		adcode: "330100",
+		districts:  [
+		 {
+		name: "西湖区",
+		adcode: "330106"
+		}
+		]
+		}
+		]
+		}
+		],
+		restriction: "0",
+		traffic_lights: "8"
+		}
+		]
+		}
+}

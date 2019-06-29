@@ -1,0 +1,162 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 9999
+
+mybatis:
+  typeAliasesPackage: cn.gov.zcy.razor.domain
+  mapper-locations: classpath:mapper/*.xml
+
+buildUrl: http://ipaas.cai-inc.com/api/zentao/api/build
+big: 1200
+mid: 240
+small: 0
+
+dubbo:
+  application:
+    name: razor
+  registry:
+    address: 172.16.101.50:1500
+    protocol: zookeeper
+    sync: false
+
+---
+spring:
+  profiles: dev
+  application:
+    name: razor
+  freemarker:
+    cache: false
+  datasource:
+    url: jdbc:postgresql://${db_host:localhost}:${db_port:5432}/haohao?currentSchema=test
+    username: postgres
+    password: postgres
+    type: com.alibaba.druid.pool.DruidDataSource
+  #  datasource:
+  #    url: jdbc:postgresql://${db_host:39.107.177.78}:${db_port:5432}/pipeline
+  #    username: pipeline
+  #    password: pipeline
+  flyway:
+    enabled: false
+  ldap:
+    urls: "ldap://10.110.2.231:389"
+    base: "DC=ldap,DC=cai-inc,DC=com"
+    username: "CN=dev,CN=Users,DC=ldap,DC=cai-inc,DC=com"
+    password: "ReadOnly@ZcyDEVUser"
+    domain: "@ldap.cai-inc.com"
+  security:
+    enable: true
+    cors: false
+    permit:
+      paths: /api/auth/login,/,/favicon.ico,/**/*.html,/**/*.css,/**/*.js,/**/*.ttf,/**/*.jpg,/**/*.png,/api/sku/*,/api/tracelog/**,/api/project/export/**,/api/sql/execute,/api/project/exportPerformance,/api/cost/export/email/taskcost
+
+logging:
+  file: ./logs/${spring.application.name}.log
+  level:
+    root: INFO
+    cn:
+      gov:
+        zcy:
+          razor:
+            dao: DEBUG
+
+server:
+  servlet:
+    context-path: /razor
+
+email:
+  token: "cvjio4HUXHY+vaf/QP85RA=="
+  url: "http://cmdb.cai-inc.com/notice/mail"
+  domain: "http://localhost:9999/razor"
+
+dingding:
+  webhookToken: "https://oapi.dingtalk.com/robot/send?access_token=884f0a6a879f19c4c59a7d010debe673bae476b753b0d8e6e74376451c481bb9"
+
+release:
+  isTestEnv: true
+
+---
+spring:
+  profiles: product
+  application:
+    name: razor
+  freemarker:
+    cache: false
+  datasource:
+    url: jdbc:postgresql://${db_host:localhost}:${db_port:5432}/postgres?currentSchema=razor
+    username: pipeline
+    password: pipeline
+    type: com.alibaba.druid.pool.DruidDataSource
+  flyway:
+    enabled: false
+  ldap:
+    urls: ""
+    base: ""
+    username: ""
+    password: ""
+    domain: ""
+  security:
+    enable: true
+    cors: false
+    permit:
+      paths: /api/auth/login,/,/favicon.ico,/**/*.html,/**/*.css,/**/*.js,/**/*.ttf,/**/*.jpg,/**/*.png,/api/sku/*,/api/tracelog/**,/api/project/export/**,/api/sql/execute,/api/project/exportPerformance,/api/cost/export/email/taskcost
+
+logging:
+  file: ./logs/${spring.application.name}.log
+  level:
+    root: WARN
+
+email:
+  token: "cvjio4HUXHY+vaf/QP85RA=="
+  url: "http://cmdb.cai-inc.com/notice/mail"
+  domain: "http://ipaas.cai-inc.com/razor"
+
+dingding:
+  webhookToken: "https://oapi.dingtalk.com/robot/send?access_token=6fc5facaeb0a3aa06e1ec594efff7c6f8c27834adb4e9cb664d97a260cf44753"
+
+release:
+  isTestEnv: false
+
+---
+spring:
+  profiles: test
+  application:
+    name: razor
+  freemarker:
+    cache: false
+  datasource:
+    url: jdbc:postgresql://${db_host:localhost}:${db_port:5432}/postgres?currentSchema=razor
+    username: pipeline
+    password: pipeline
+    type: com.alibaba.druid.pool.DruidDataSource
+  flyway:
+    enabled: false
+  ldap:
+    urls: ""
+    base: ""
+    username: ""
+    password: ""
+    domain: ""
+  security:
+    enable: true
+    cors: false
+    permit:
+      paths: /api/auth/login,/,/favicon.ico,/**/*.html,/**/*.css,/**/*.js,/**/*.ttf,/**/*.jpg,/**/*.png,/api/sku/*,/api/tracelog/**,/api/project/export/**,/api/sql/execute,/api/project/exportPerformance,/api/cost/export/email/taskcost
+
+logging:
+  file: ./logs/${spring.application.name}.log
+  level:
+    root: INFO
+
+email:
+  token: "cvjio4HUXHY+vaf/QP85RA=="
+  url: "http://cmdb.cai-inc.com/notice/mail"
+  domain: "http://ipaas-test.cai-inc.com/razor"
+
+dingding:
+  webhookToken: "https://oapi.dingtalk.com/robot/send?access_token=6fc5facaeb0a3aa06e1ec594efff7c6f8c27834adb4e9cb664d97a260cf44753"
+
+release:
+  isTestEnv: true
