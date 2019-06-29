@@ -2,13 +2,19 @@ package cn.meng.dong.service.Impl;
 
 import cn.meng.dong.dao.UserMapper;
 import cn.meng.dong.domain.User;
+import cn.meng.dong.dto.UserDTO;
 import cn.meng.dong.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.assertj.core.util.Lists;
+import org.springframework.util.CollectionUtils;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 
 /**
  * @CopyRightBy zcy.qyg.cn
@@ -62,5 +68,41 @@ public class UserServiceImpl implements UserService {
     @Override
     public int batchUpdate(List<User> record) {
         return userMapper.batchUpdate(record);
+    }
+
+    @Override
+    public List<User> getDetailInfo(Integer age) {
+        List<User> users = userMapper.selectByAge(Math.toIntExact(age));
+        if(CollectionUtils.isEmpty(users)){
+            log.error("该年龄 没有用户");
+            return Lists.newArrayList();
+        }
+        return convert2UserDTOList(users);
+    }
+
+    private List<User> convert2UserDTOList(List<User> users){
+        return users.stream().map(u->{
+            UserDTO userDTO = convert2UserDTO(u);
+            return userDTO;
+        }).collect(Collectors.toList());
+//        List<UserDTO> userDTOS = Lists.newArrayList();
+//        users.stream().forEach(x->{
+//            userDTOS.add(convert2UserDTO(x));
+//        });
+//        return userDTOS.stream().collect(Collectors.toList());
+
+    }
+    public UserDTO convert2UserDTO(User user){
+        if (user == null) return new UserDTO();
+        UserDTO userDTO = new UserDTO();
+        BeanUtils.copyProperties(user,userDTO);
+        if (user.getSex().equals(1)) {
+            userDTO.setHasGirl(false);
+        } else {
+            userDTO.setHasGirl(true);
+            userDTO.setGirlName("qiuling");
+            userDTO.setGirlAge(21);
+        }
+        return userDTO;
     }
 }

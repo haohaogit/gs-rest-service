@@ -16,6 +16,8 @@ public interface UserMapper {
 
     User selectByPrimaryKey(Long id);
 
+    List<User> selectByAge(Integer age);
+
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);

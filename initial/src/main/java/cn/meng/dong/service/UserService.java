@@ -23,4 +23,6 @@ public interface UserService {
     int batchDelete(List<Long> ids);
 
     int batchUpdate(List<User> record);
+
+    List<User> getDetailInfo(Integer age);
 }
